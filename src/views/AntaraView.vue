@@ -1,6 +1,6 @@
 <template>
-    <div class="about">
-
+    <div class="antara">
+        sadss
     </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style>
-.about {
+.antara {
     width: 80%;
     margin: auto;
 }

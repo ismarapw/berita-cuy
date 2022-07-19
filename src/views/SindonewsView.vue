@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="sindo">
 
     </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style>
-.about {
+.sindo {
     width: 80%;
     margin: auto;
 }

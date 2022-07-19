@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="okezone">
 
     </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style>
-.about {
+.okezone {
     width: 80%;
     margin: auto;
 }

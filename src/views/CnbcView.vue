@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="cnbc">
 
     </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style>
-.about {
+.cnbc {
     width: 80%;
     margin: auto;
 }
