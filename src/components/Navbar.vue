@@ -1,7 +1,7 @@
 <template>
   <nav class="flex justify-content-between">
     <div>
-      <h1 class="brand">Berita<span>Cuy!</span></h1>
+      <h1 class="brand">Berita<span class="text-orange">Cuy!</span></h1>
     </div>
 
     <div class="nav-items flex align-items-center" v-bind:class="{show : transformNav}">
@@ -70,10 +70,6 @@ export default {
     font-size: 30px;
   }
 
-  .brand span {
-    color: #F45800;
-  }
-
   .nav-item {
     margin-left : 15px;
     cursor: pointer;
@@ -107,8 +103,6 @@ export default {
   @media screen and (max-width: 768px) {
     nav {
       margin-top : 1rem auto;
-      z-index: 2;
-      
     }
 
     .nav-items {

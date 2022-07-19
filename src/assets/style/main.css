@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -19,10 +19,45 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
+.align-items-start {
+    align-items: flex-start;
+}
+
 .align-self-start {
     align-self:flex-start;
 }
 
 .justify-content-between {
     justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.text-grey {
+    color: #636363;
+}
+
+.text-orange {
+    color : #F45800
+}
+
+.portal-text {
+    background-color: rgba(244, 88, 0, 0.21);
+    padding: 10px;
+    border-radius : 10px; 
+    color: #F45800;
+}
+
+.underline-text{
+    width: 75px;
+    border: 1px solid #F45800;
+    margin: 0 0 25px 0;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
