@@ -1,6 +1,8 @@
 <template>
-  <Navbar />
-  <router-view/>
+  <div class="fit">
+    <Navbar />
+    <router-view/>
+  </div>
   <Footer />
 </template>
 
@@ -18,4 +20,10 @@ export default {
 </script>
 <style>
 
+@media screen and (min-width:1920px){
+    #app .fit {
+        width: 1920px;
+        margin: auto;
+    }
+}
 </style>

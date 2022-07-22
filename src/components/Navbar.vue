@@ -9,19 +9,19 @@
         <router-link v-bind:to = "{name : 'home'}" class="router">Home</router-link>
       </div>
       <div class="nav-item">
-        <router-link v-bind:to = "{name : 'antara'}" class="router">Antara</router-link>
+        <router-link v-bind:to = "{name : 'portal', params : {portal: 'tribun'}}" class="router">Tribun</router-link>
       </div>
       <div class="nav-item">
-        <router-link v-bind:to = "{name : 'cnn'}" class="router">CNN</router-link>
+        <router-link v-bind:to = "{name : 'portal', params : {portal: 'cnn'}}" class="router">CNN</router-link>
       </div>
       <div class="nav-item">
-        <router-link v-bind:to = "{name : 'okezone'}" class="router">Okezone</router-link>
+        <router-link v-bind:to = "{name : 'portal', params : {portal: 'okezone'}}" class="router">Okezone</router-link>
       </div>
       <div class="nav-item">
-        <router-link v-bind:to = "{name : 'cnbc'}" class="router">CNBC</router-link>
+        <router-link v-bind:to = "{name : 'portal', params : {portal: 'cnbc'}}" class="router">CNBC</router-link>
       </div>
       <div class="nav-item">
-        <router-link v-bind:to = "{name : 'sindonews'}" class="router">Sindonews</router-link>
+        <router-link v-bind:to = "{name : 'portal', params : {portal: 'sindonews'}}" class="router">Sindonews</router-link>
       </div>
       <div class="nav-item">
         <router-link v-bind:to = "{name : 'about'}" class="router">About</router-link>
@@ -80,12 +80,12 @@ export default {
   }
 
 
-  .router {
+  nav .router {
     text-decoration: none;
     color: rgb(26, 26, 26);
   }
 
-  .router-link-active{
+  nav .router-link-active{
     background-color: #F45800;
     padding: 5px 15px;
     border-radius : 10px;
@@ -107,9 +107,8 @@ export default {
 
     .nav-items {
       transform: translateX(100%);
-      opacity: 0;
       position: absolute;
-      z-index: 2;
+      z-index: 3;
       top: 0;
       bottom: 0;
       right: 0;
@@ -118,6 +117,7 @@ export default {
       flex-direction: column;
       padding: 20px 0;
       transition: ease-in-out all 0.5s;
+      height: 100vh;
     }
 
     .nav-item {
@@ -127,7 +127,6 @@ export default {
     .show {
       transition: ease-in-out all 0.5s;
       transform: translateX(0);
-      opacity: 1;
     }
 
     .toggle-nav {

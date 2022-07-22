@@ -1,11 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AntaraView from '../views/AntaraView.vue'
-import SindonewsView from '../views/SindonewsView.vue'
-import CnnView from '../views/CnnView.vue'
-import OkezoneView from '../views/OkezoneView.vue'
-import CnbcView from '../views/CnbcView.vue'
+import PortalView from '../views/PortalView.vue'
+import DetailView from '../views/DetailView.vue'
 import AboutView from '../views/AboutView.vue'
+
 
 const routes = [
   {
@@ -13,35 +11,25 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  
   {
-    path: '/antara',
-    name: 'antara',
-    component: AntaraView
+    path: '/:portal/',
+    name: 'portal',
+    component: PortalView,
+    props : true
   },
-  {
-    path: '/sindonews',
-    name: 'sindonews',
-    component: SindonewsView
-  },
-  {
-    path: '/cnn',
-    name: 'cnn',
-    component: CnnView
-  },
-  {
-    path: '/okezone',
-    name: 'okezone',
-    component: OkezoneView
-  },
-  {
-    path: '/cnbc',
-    name: 'cnbc',
-    component: CnbcView
-  },
+  
   {
     path: '/about',
     name: 'about',
     component: AboutView
+  },
+
+  {
+    path : '/detail/:portal/:category/:id',
+    name : 'detail',
+    component : DetailView,
+    props : true
   }
 ]
 

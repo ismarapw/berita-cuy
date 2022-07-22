@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    <Banner />
-    <Headline />
+  <div class="home-view">
+    <Banner v-bind:newsPortal = "newsPortal" />
+    <Headline v-bind:newsPortal = "newsPortal" />
   </div>
 </template>
 
@@ -12,22 +12,19 @@ import Headline from "../components/Headline.vue"
 
 export default {
   name: 'HomeView',
+
+  data(){
+    return {
+      newsPortal : ['tribun', 'cnn','cnbc', 'okezone','sindonews']
+    }
+  },
+
   components : {
     Banner, Headline
   }
-
 }
 </script>
 
 <style>
-  .home {
-      width: 80%;
-      margin: auto;
-  }
 
-  @media screen and (max-width: 900px) {
-    .home {
-      width: 96%; 
-    }
-  }
 </style>
