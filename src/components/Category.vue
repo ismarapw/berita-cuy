@@ -1,6 +1,8 @@
 <template>
     <div v-if="categories === null">
-        <div>Loading</div>    
+        <div class="flex justify-content-center">
+            <img src="../assets/img/loading.svg" alt="">
+        </div>   
     </div>
 
     <div v-else-if="categories === 'Portal tidak ditemukan'">
@@ -46,6 +48,9 @@ export default {
 
     methods : {
         requestCategories(portalName){
+            // agar loading :'v
+            this.categories = null;
+            
             // request kategori berita dari portal
             axios.get("https://api-berita-indonesia.vercel.app/")
             .then((response) => {        
@@ -91,6 +96,7 @@ export default {
         overflow: auto;
     }
 
+
     .category::-webkit-scrollbar{
         display: none;
     }
@@ -117,7 +123,9 @@ export default {
         cursor: pointer;
     }
 
+
     input:checked + label {
+        transition: .2s ease-in;
         color: #fff;
         background-color: #F45800;
         border: none;

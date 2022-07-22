@@ -54,13 +54,6 @@ export default {
         font-size: 24px;
     }
 
-    .news-img img {
-        width: 130px;
-        height: 130px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-
     .headline-title {
         font-size : 16px
     }

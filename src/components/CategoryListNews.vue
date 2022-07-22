@@ -1,7 +1,9 @@
 <template>
   <div class="news-list">
     <div v-if="newsList === null">
-        <div>Loading</div>
+        <div class="flex justify-content-center">
+            <img src="../assets/img/loading.svg" alt="">
+        </div>   
     </div>
 
     <div v-if="newsList === 'Portal atau Kategori Tidak Ditemukan'">
@@ -44,6 +46,9 @@ export default {
 
     methods : {
         getNewsFromPortal(portal, category){
+            // supaya loading :'v
+            this.newsList = null;
+
             // request detail berita dari portal
             axios.get("https://api-berita-indonesia.vercel.app/" + portal + "/" + category)
             .then((response) => {
@@ -100,7 +105,13 @@ export default {
         margin-top: 30px;
     }
 
+    .a-news:hover .news-img {
+        width: 250px;
+        transition: .2s ease-in;
+    }
+
     .news-list .news-img {
+        transition: .2s ease-out;
         width: 200px;
         height: 150px;
         object-fit: cover;
@@ -148,6 +159,10 @@ export default {
 
         .error-img {
             width: 100%;
+        }
+        .a-news:hover .news-img {
+            width: 120px;
+            transition: .2s ease-in;
         }
     }
 </style>

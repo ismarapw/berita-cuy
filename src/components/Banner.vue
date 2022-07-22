@@ -1,18 +1,25 @@
 <template>
-    <div class="banner" v-if="bannerNews !== null">
-        <router-link v-bind:to = "{name : 'detail', params : {portal : bannerNews.portal, category : 'terbaru', id : bannerNews.id}}">
-            <div class="img-banner">
-                <img v-bind:src= "bannerNews.image" alt="">
-            </div>
-            <div class="content-banner flex justify-content-center">
-                <div class="box-banner">
-                    <span class="text-grey">Terbaru</span>
-                    <h2 class="banner-title">{{bannerNews.title}}</h2>
-                    <p class="text-grey">{{bannerNews.pubDate}}</p>
-                    <span class="portal-text">{{bannerNews.portal}}</span>
+    <div class="banner" >
+        <div v-if="bannerNews === null">
+            <div class="flex justify-content-center">
+                <img src="../assets/img/loading.svg" alt="">
+            </div>   
+        </div>
+        <div v-else>
+            <router-link v-bind:to = "{name : 'detail', params : {portal : bannerNews.portal, category : 'terbaru', id : bannerNews.id}}">
+                <div class="img-banner">
+                    <img v-bind:src= "bannerNews.image" alt="">
                 </div>
-            </div>
-        </router-link>
+                <div class="content-banner flex justify-content-center">
+                    <div class="box-banner">
+                        <span class="text-grey">Terbaru</span>
+                        <h2 class="banner-title">{{bannerNews.title}}</h2>
+                        <p class="text-grey">{{bannerNews.pubDate}}</p>
+                        <span class="portal-text">{{bannerNews.portal}}</span>
+                    </div>
+                </div>
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -73,7 +80,19 @@ export default {
         position: relative;
     }
 
+    .banner:hover .box-banner {
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+        transition: .2s ease-in;
+        margin-bottom: 25px;
+    }
+
+    .banner:hover img {
+        transition: .1s ease-in;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    }
+
     .img-banner img {
+        transition: .1s ease-out;
         width: 100%;
         max-height: 480px;
         object-fit: cover;
@@ -94,6 +113,7 @@ export default {
         box-sizing: border-box;
         border-radius: 10px;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+        transition: .2s ease-out;
     }
 
 

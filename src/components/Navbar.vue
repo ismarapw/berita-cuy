@@ -75,6 +75,10 @@ export default {
     cursor: pointer;
   }
 
+  .nav-item:hover {
+    color: #F45800;
+  }
+
   .nav-items {
     opacity: 1;
   }
@@ -83,6 +87,12 @@ export default {
   nav .router {
     text-decoration: none;
     color: rgb(26, 26, 26);
+    transition: .1s ease-in;
+  }
+
+  nav .router:hover {
+    color: #F45800;
+    transition: .1s ease-in;
   }
 
   nav .router-link-active{
@@ -91,6 +101,12 @@ export default {
     border-radius : 10px;
     color: white;
     font-weight: 500;
+    transition: .1s ease-in;
+  }
+
+  nav .router-link-active:hover {
+    color: #fff;
+    transition: .1s ease-in;
   }
 
 

@@ -1,7 +1,9 @@
 <template>
     <div class="detail-view">
         <div v-if="detailNews === null">
-            <div>Loading</div>
+            <div class="flex justify-content-center">
+                <img src="../assets/img/loading.svg" alt="">
+            </div>   
         </div>
 
         <div v-if="detailNews === 'Portal atau Kategori Tidak Ditemukan' || detailNews === 'Berita Tidak Ditemukan'">
@@ -26,7 +28,7 @@
             <div class="detail-content" v-if="detailNews !== null">
                 <h1 class="news-title">{{detailNews.title}}</h1>
                 <img v-bind:src= detailNews.image class="detail-image" alt="">
-                <p class="news-date">Jumat, 23 Maret 2021</p>
+                <p class="news-date">{{parseDate(detailNews.date)}}</p>
                 <p class="news-description">{{detailNews.description}}...</p>
                 <div class="flex justify-content-center">
                     <a class="news-detail-link" v-bind:href= detailNews.link>Baca Selengkapnya di {{portal}}</a>
@@ -46,6 +48,16 @@ export default {
     data(){
         return {
             detailNews : null,
+        }
+    },
+
+    methods : {
+        parseDate(date){
+            const month = ["Januari","Februari","Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+            const day = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            const makeDate = new Date(date);
+
+            return day[makeDate.getDay()] + ", " + makeDate.getDate() +" " + month[makeDate.getMonth()] + " " + makeDate.getFullYear()
         }
     },
 
