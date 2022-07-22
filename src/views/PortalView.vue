@@ -1,9 +1,5 @@
 <template>
     <div class="portal-view">
-        <header>
-            <h1>{{portal}}</h1>
-            <hr class = "underline-text">
-        </header>
         <Category v-bind:portal="portal" />
     </div>
 </template>

@@ -100,10 +100,11 @@ export default {
         margin-top: 30px;
     }
 
-    .news-img {
+    .news-list .news-img {
         width: 200px;
         height: 150px;
         object-fit: cover;
+        border-radius: 5px;
     }
 
     .error-img {
@@ -140,7 +141,7 @@ export default {
             margin: -30px 0 20px 20px ;
         }
 
-        .news-img {
+        .news-list .news-img {
             width: 100px;
             height: 100px;
         }

@@ -11,6 +11,10 @@
     </div>
 
     <div v-else>
+        <header>
+            <h1>{{portal}}</h1>
+            <hr class = "underline-text">
+        </header>
         <div class="category flex" v-dragscroll>
             <div v-for="(category,idx) in categories" v-bind:key = "category" class="toggle-category">
                 <input v-bind:id = "idx" type="radio" name="category" v-bind:checked = "idx === 0" v-on:click = "updateCurrentCategory(category)" />

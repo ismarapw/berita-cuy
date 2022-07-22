@@ -5,7 +5,6 @@
         </div>
 
         <div v-if="detailNews === 'Portal atau Kategori Tidak Ditemukan' || detailNews === 'Berita Tidak Ditemukan'">
- 
             <div class="flex justify-content-center">
                 <img src="../assets/img/not-found.svg" alt="" class="error-img">
             </div>

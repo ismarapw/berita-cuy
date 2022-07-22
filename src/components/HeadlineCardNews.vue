@@ -1,7 +1,7 @@
 <template>
     <div class="card-news" v-if="detailNews !== null">
         <router-link class="router" v-bind:to = "{name : 'detail', params : {portal : detailNews.portal, category : 'terbaru', id : detailNews.id}}">
-            <div class=" flex">
+            <div class="flex">
                 <div class="news-img">
                     <img v-bind:src= "detailNews.image" alt="">
                 </div>

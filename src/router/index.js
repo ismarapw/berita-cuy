@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import PortalView from '../views/PortalView.vue'
 import DetailView from '../views/DetailView.vue'
 import AboutView from '../views/AboutView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 
 const routes = [
@@ -30,6 +31,12 @@ const routes = [
     name : 'detail',
     component : DetailView,
     props : true
+  },
+
+  {
+    path : '/:catchAll(.*)',
+    name : 'NotFound',
+    component : NotFoundView
   }
 ]
 

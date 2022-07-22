@@ -1,9 +1,14 @@
 <template>
     <div class="headline">
         <div class="portal-headline" v-for="portal in newsPortal" v-bind:key="portal">
-            <div class="portal">
-                <h1>Terbaru di {{portal}}</h1>
-                <hr class="underline-text flex align-items-start">
+            <div class="portal flex justify-content-between">
+                <div>
+                    <h1>Terbaru di {{portal}}</h1>
+                    <hr class="underline-text flex align-items-start">
+                </div>
+                <div>
+                    <router-link class="router-latest" v-bind:to= "{name : 'portal', params : {portal: portal}}">Lihat semua <i class="ri-arrow-right-s-line"></i></router-link >
+                </div>
             </div>
             <div class="grid">
                 <div v-for="(_,HeadlineNewsIdx) in maxHeadlineNews" v-bind:key = "HeadlineNewsIdx">
@@ -75,6 +80,16 @@ export default {
 
     .content-news p {
         margin-top: 3px;
+    }
+
+    .ri-arrow-right-s-line{
+        position: relative;
+        top: 2.5px;
+    }
+
+    .router-latest {
+        text-decoration: none;
+        color: #F45800;
     }
 
 </style>

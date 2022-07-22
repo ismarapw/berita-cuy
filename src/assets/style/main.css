@@ -69,13 +69,13 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.portal-view, .detail-view, .about-view, .home-view{
+.portal-view, .detail-view, .about-view, .home-view, .not-found-view{
     width: 80%;
     margin: 50px auto;
 }
 
 @media screen and (max-width:900px) {
-    .portal-view, .detail-view, .about-view, .home-view{
+    .portal-view, .detail-view, .about-view, .home-view, .not-found-view{
       width: 95%;
     }
 }
