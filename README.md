@@ -5,7 +5,7 @@ This project website is a one of my milestone in my journey to enhance my skills
 
 # Features
 1. News Categories that offers a range of news categories, such as technology, politics, health, and more.
-2. Real-time Updates for each portal news (There are 5 news portal named Antara, CNN, Okezone CNBC dan Okezone).
+2. Real-time Updates for each portal news (There are 5 news portal namely Antara, CNN, Okezone CNBC dan Okezone).
 3. Responsive design which is designed to be fully responsive, providing an optimal viewing experience across different devices and screen sizes.
 
 # Installation and Usage
